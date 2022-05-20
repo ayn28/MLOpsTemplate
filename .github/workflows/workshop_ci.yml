@@ -38,7 +38,7 @@ jobs:
          az ml job create -s -f src/workshop/core/pipelines/training_pipeline.yml
 
       - name:  Create Pull Request to Main
-        uses: thomaseizinger/create-pull-request@master
+        uses: ayn28/create-pull-request@master
         with:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }} #setup: provide your github secret name
           head: ${{ github.ref }}
